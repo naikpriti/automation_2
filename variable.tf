@@ -63,15 +63,3 @@ variable "stop_schedule_name" {
   description = "schedule start time"
 
 }
-
-/*variable "start_week_day"{
-    type = string
-    description = "schedule start time"
-
-}
-
-variable "stop_week_day"{
-    type = string
-    description = "schedule start time"
-
-}*/
