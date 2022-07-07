@@ -86,7 +86,7 @@ resource "azurerm_automation_account" "example" {
 
 
 data "local_file" "example" {
-  filename = "./example.ps"
+  filename = "${path.module}/../example.ps"
 }
 
 resource "azurerm_automation_runbook" "example" {
