@@ -85,9 +85,9 @@ resource "azurerm_automation_account" "example" {
 
 
 
-data "local_file" "example" {
+/*data "local_file" "example" {
   filename = "${path.module}/../example.ps"
-}
+}*/
 
 resource "azurerm_automation_runbook" "example" {
   name                    = var.runbook_name
@@ -99,7 +99,7 @@ resource "azurerm_automation_runbook" "example" {
   description             = "This is an example runbook"
   runbook_type            = "PowerShell"
 
-  content = data.local_file.example.content
+  content = "${path.module}/example.ps"
 }
 
 
